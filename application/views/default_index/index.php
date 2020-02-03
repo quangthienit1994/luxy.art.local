@@ -355,11 +355,11 @@ function add_follow2(user_id){
 										var msg=data.split("{return_do_bookmark_follow_user}");
 										if(msg[1]==0)
 					                    {	
-											 $('#show2_text_follow'+user_id_bi_click).html('<?php echo $this->lang->line('to_follow_exits'); ?>');
+											 $('#show2_text_follow'+user_id_bi_click).html("<?php echo $this->lang->line('to_follow_exits'); ?>");
 					                    }
 					                    else if(msg[1]==1)
 					                    {
-											$('#show2_text_follow'+user_id_bi_click).html('<?php echo $this->lang->line('to_follow_exits'); ?>');
+											$('#show2_text_follow'+user_id_bi_click).html("<?php echo $this->lang->line('to_follow_exits'); ?>");
 					                    }
 						}
 
@@ -387,11 +387,11 @@ function remove_follow2(user_id){
 										var msg=data.split("{return_do_remove_bookmark_follow_user}");
 										if(msg[1]==0)
 					                    {	
-											 $('#show2_text_follow'+user_id_bi_click).html('<?php echo $this->lang->line('to_follow'); ?>');
+											 $('#show2_text_follow'+user_id_bi_click).html("<?php echo $this->lang->line('to_follow'); ?>");
 					                    }
 					                    else if(msg[1]==1)
 					                    {
-											$('#show2_text_follow'+user_id_bi_click).html('<?php echo $this->lang->line('to_follow'); ?>');
+											$('#show2_text_follow'+user_id_bi_click).html("<?php echo $this->lang->line('to_follow'); ?>");
 					                    }
 						}
 

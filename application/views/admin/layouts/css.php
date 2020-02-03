@@ -4,8 +4,8 @@
 <link rel="shortcut icon" href="publics/admin/img/favicon.ico">
 
 <!-- Font CSS (Via CDN) -->
-<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700'>
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700'>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 
 <!-- Theme CSS -->
 <link rel="stylesheet" type="text/css" href="publics/admin/skin/default_skin/css/theme.css">

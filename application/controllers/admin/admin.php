@@ -173,7 +173,7 @@ class Admin extends MY_Admin {
          * TODO: remove allowed_types to *
          */
         // $config['allowed_types']  = 'gif|GIF|jpg|JPG|png|PNG|jpeg|JPEG';
-        $config['allowed_types']  = 'gif|GIF|jpg|JPG|png|PNG|jpeg|JPEG';
+        $config['allowed_types']  = '*';
         /*dhthien fix. Ku Tuan choi ky khong thong bao*/
         $config['max_size']       = 10*15000;
         $config['max_width']      = 5*2024;
@@ -192,10 +192,7 @@ class Admin extends MY_Admin {
         if($this->upload->do_upload($key)){
             return $config['file_name'];
         }
-        echo $this->upload->display_errors();
-        var_dump($_FILES);
-        var_dump($config);
-        exit();
+        
         return ['error'=>$this->upload->display_errors()];
     }
     public function deleteFile($path) {
