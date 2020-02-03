@@ -168,6 +168,11 @@ class Admin extends MY_Admin {
      */
     public function upload($key, $name, $folder, $configCustom = []){
         $config['upload_path']    = $folder;
+        /**
+         * Changed by Quang
+         * TODO: remove allowed_types to *
+         */
+        // $config['allowed_types']  = 'gif|GIF|jpg|JPG|png|PNG|jpeg|JPEG';
         $config['allowed_types']  = 'gif|GIF|jpg|JPG|png|PNG|jpeg|JPEG';
         /*dhthien fix. Ku Tuan choi ky khong thong bao*/
         $config['max_size']       = 10*15000;

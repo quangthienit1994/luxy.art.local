@@ -47,10 +47,28 @@
 
 $active_group = 'default';
 $active_record = TRUE;
+
+/** * Database on localhost by Quang */
+// $db['default']['hostname'] = 'localhost';
+// $db['default']['username'] = 'root';
+// $db['default']['password'] = 'mysql';
+// $db['default']['database'] = 'dbluxyart';
+/** END Database Localhost by Quang */
+
+/** Database on test environment */
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'mysql';
-$db['default']['database'] = 'dbluxyart';
+$db['default']['username'] = 'omotenaship_test';
+$db['default']['password'] = 'omotenaship_test';
+$db['default']['database'] = 'omotenaship_test';
+/** END Database on test environment */
+
+/** Database on production environment */
+// $db['default']['hostname'] = 'localhost';
+// $db['default']['username'] = 'omotenaship';
+// $db['default']['password'] = 'omotenaship';
+// $db['default']['database'] = 'omotenaship';
+/** END Database on production environment */
+
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
