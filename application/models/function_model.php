@@ -1,5 +1,6 @@
 <?php
- 	class Function_model extends CI_Model
+
+class Function_model extends CI_Model
 	{
  	function __contruction()
 	{
@@ -7,7 +8,8 @@
 		
 		$this->load->model('manager_image_model');
 		$this->load->helper('cookie');
-		
+		$this->config->load('errors');
+		$this->config->load('mail');
    	}
    	/**
    	 * Get User Follow
@@ -2069,14 +2071,7 @@
 		
 		$mail = new Qdmail();
 		$mail -> smtp(true);
-		$param = array(
-				'host' => 'smtp.luxyart.conoha.io', //smtpサーバーのアドレス
-				'port'=> 587 , //ポート番号
-				'protocol' => 'SMTP_AUTH', //認証方法
-				'user' => 'verification@luxy.art', //smtpサーバーのユーザー名
-				'pass' => '1SMWVxF9ra', //smtpサーバーのパスワード
-				'from' => 'verification@luxy.art',　//発信元メールアドレス
-		);
+		$param = $this->config->item("mail");;
 		$mail -> smtpServer($param);
 		$mail -> to($to); //宛先
 		$mail -> subject($subject); //タイトル
@@ -2086,7 +2081,7 @@
 		
 		if($return_flag != TRUE){
 			
-			$email_to	= 'tranduyhuu187@gmail.com';
+			$email_to	= $this->config->item("errors")["email"]["to"];
 			$subject 	= 'Error email luxy.art: '.$to;
 			$message 	= 'Error email luxy.art don\'t send: '.$to;
 			$headers 	= 'From: verification@luxy.art' . "\r\n" .
@@ -2134,14 +2129,7 @@
 		
 		$mail = new Qdmail();
 		$mail -> smtp(true);
-		$param = array(
-				'host' => 'smtp.luxyart.conoha.io', //smtpサーバーのアドレス
-				'port'=> 587 , //ポート番号
-				'protocol' => 'SMTP_AUTH', //認証方法
-				'user' => 'verification@luxy.art', //smtpサーバーのユーザー名
-				'pass' => '1SMWVxF9ra', //smtpサーバーのパスワード
-				'from' => 'verification@luxy.art',　//発信元メールアドレス
-		);
+		$param = $this->config->item("mail");
 		$mail -> smtpServer($param);
 		$mail -> to($to); //宛先
 		$mail -> subject($subject); //タイトル
