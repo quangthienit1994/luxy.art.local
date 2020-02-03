@@ -1,0 +1,183 @@
+@charset "utf-8";
+/*====================================================================
+
+	Contents CSS
+
+====================================================================*/
+/*-----------------------------
+	Google font ゴシック
+------------------------------*/
+@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+body{
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 300;
+	font-size: 100%;
+	color:#323232;;
+}
+
+/*-----------------------------
+	font Weight
+------------------------------*/
+.noto100 {font-weight:100;}
+.noto200 {font-weight:200;}
+.noto300 {font-weight:300;}
+.noto400 {font-weight:400;} /* Nomarl */
+.noto500 {font-weight:500;}
+.noto600 {font-weight:600;}
+.noto700 {font-weight:700;}
+.noto800 {font-weight:800;}/* Bold */
+.noto900 {font-weight:900;}
+
+/*-----------------------------
+	base 
+------------------------------*/
+html{
+	overflow-y: scroll;
+	margin-bottom:1px;
+	height:100%;
+	font-size: 62.5%;
+}
+
+.clear_fix:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+a {color:#ababab;
+	text-decoration:none;
+	}
+
+img{vertical-align:bottom;}
+
+a:hover {
+	opacity:0.75;
+	filter: alpha(opacity=75);        /* ie lt 8 */
+	-ms-filter: "alpha(opacity=70)";  /* ie 8 */
+	-moz-opacity:0.75;                 /* FF lt 1.5, Netscape */
+	-khtml-opacity: 0.75;              /* Safari 1.x */
+	zoom:1;
+}
+
+/*-----------------------------
+	Color 
+------------------------------*/
+.error{
+	color: #FF0000;
+}
+
+.example{
+	color: #333399;
+}
+
+/*-----------------------------
+	Layout 
+------------------------------*/
+.right{
+	text-align: right;
+}
+
+.center{
+	text-align: center;
+}
+
+.left{
+	text-align: left;
+}
+
+/*-----------------------------
+	h 
+------------------------------*/
+h1{
+	margin: 0;
+	padding: 0;
+}
+
+h2{
+	margin: 0;
+	padding: 0;
+}
+
+h3{
+	margin: 0;
+	padding: 0;
+}
+
+h4{
+	margin: 0;
+	padding: 0;
+}
+
+h5{
+	margin: 0;
+	padding: 0;
+}
+
+h6{
+	margin: 0;
+	padding: 0;
+}
+
+/*-----------------------------
+	Color 
+------------------------------*/
+.logc{color:#00cca8;}
+.logctxt{color:#323232;}
+.greena{color:#3be8b0;}
+.greenb{color:#1aafd0;}
+.purple{color:#6a67ce;}
+.yellow{color:#ffb900;}
+.pink{color:#fc636b;}
+
+
+.bg1{border:3px solid #e60012}
+.bg2{border:3px solid #7467ad}
+.bg3{border:3px solid #c44f99}
+.bg4{border:3px solid #00a0e9}
+.bg5{border:3px solid #009944}
+.bg6{border:3px solid #fff100}
+.bg7{border:3px solid #f39800}
+
+
+
+input{
+border:0;
+padding:10px;
+border:solid 1px #ccc;
+}
+
+.red{
+	color: #ff0000
+}
+
+/*-----------------------------
+	Loading
+------------------------------*/
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 1;
+}
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+

@@ -1,0 +1,183 @@
+<?php
+if(!isset($_SESSION)){
+	session_start();
+}
+$CI =& get_instance();
+$CI->config->load();
+if(!isset($_SESSION['lang'])){
+	$_SESSION['lang'] = 'ja';
+}
+$config['language'] = $_SESSION['lang'];
+$ngonngu = $config['language'];
+$this->lang->load('dich', $ngonngu);
+?>
+<div class="contents-cart">
+        <div class="contents-cart__wrapper clearfix">
+          <div class="breadly">
+            <ul>
+              <li><a href="<?php echo base_url()?>"><span itemprop="title">ホーム</span></a></li>
+              <li><span itemprop="title">クレジットの購入</span></li>
+            </ul>
+          </div>
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.simplify.com/commerce/v1/simplify.js"></script>
+<script type="text/javascript">
+    function simplifyResponseHandler(data) {
+        var $paymentForm = $("#simplify-payment-form");
+        // Remove all previous errors
+        $(".error").remove();
+        // Check for errors
+        if (data.error) {
+            // Show any validation errors
+            if (data.error.code == "validation") {
+                var fieldErrors = data.error.fieldErrors,
+                        fieldErrorsLength = fieldErrors.length,
+                        errorList = "";
+                for (var i = 0; i < fieldErrorsLength; i++) {
+                    errorList += "<div class='error'>Field: '" + fieldErrors[i].field +
+                            "' is invalid - " + fieldErrors[i].message + "</div>";
+                }
+                // Display the errors
+                $paymentForm.after(errorList);
+            }
+            // Re-enable the submit button
+            $("#process-payment-btn").removeAttr("disabled");
+        } else {
+            // The token contains id, last4, and card type
+            var token = data["id"];
+            // Insert the token into the form so it gets submitted to the server
+            $paymentForm.append("<input type='hidden' name='simplifyToken' value='" + token + "' />");
+            // Submit the form to the server
+            $paymentForm.get(0).submit();
+        }
+    }
+    $(document).ready(function() {
+        $("#simplify-payment-form").on("submit", function() {
+            // Disable the submit button
+            $("#process-payment-btn").attr("disabled", "disabled");
+            // Generate a card token & handle the response
+            SimplifyCommerce.generateToken({
+                key: "sbpb_ZDQ3ZjJlMjEtOWEzOC00ZTc0LTliODYtMjU5MzNhNjdmMWNl",
+                card: {
+                    number: $("#cc-number").val(),
+                    cvc: $("#cc-cvc").val(),
+                    expMonth: $("#cc-exp-month").val(),
+                    expYear: $("#cc-exp-year").val()
+                }
+            }, simplifyResponseHandler);
+            // Prevent the form from submitting
+            return false;
+        });
+    });
+</script>
+
+              <h1>Charge $10 with Simplify Commerce</h1>
+<form id="simplify-payment-form" action="" method="POST">
+    <!-- The $10 amount is set on the server side -->
+    <div>
+        <label>Credit Card Number: </label>
+        <input id="cc-number" type="text" maxlength="20" autocomplete="off" value="" autofocus />
+    </div>
+    <div>
+        <label>CVC: </label>
+        <input id="cc-cvc" type="text" maxlength="4" autocomplete="off" value=""/>
+    </div>
+    <div>
+        <label>Expiry Date: </label>
+        <select id="cc-exp-month">
+            <option value="01">Jan</option>
+            <option value="02">Feb</option>
+            <option value="03">Mar</option>
+            <option value="04">Apr</option>
+            <option value="05">May</option>
+            <option value="06">Jun</option>
+            <option value="07">Jul</option>
+            <option value="08">Aug</option>
+            <option value="09">Sep</option>
+            <option value="10">Oct</option>
+            <option value="11">Nov</option>
+            <option value="12">Dec</option>
+        </select>
+        <select id="cc-exp-year">
+            <option value="15">2015</option>
+            <option value="16">2016</option>
+            <option value="17">2017</option>
+            <option value="18">2018</option>
+            <option value="19">2019</option>
+            <option value="20">2020</option>
+            <option value="21">2021</option>
+            <option value="22">2022</option>
+            <option value="23">2023</option>
+            <option value="24">2024</option>
+        </select>
+    </div>
+    <button id="process-payment-btn" type="submit">Process Payment</button>
+</form>
+          <form>
+            <div class="contents-cart__sub">
+              <div class="credit-order-fix">
+                <p class="credit-order-fix__info">10クレジット<br /><span>有効期限：2018.01.20</span></p>
+                <p class="credit-order-fix__price">価格<span>1,850<span>円</span></span></p>
+                <div class="credit-order-fix__btn"><a href="credit-comp.html">クレジットを購入する</a></div>
+              </div>
+            </div>
+            <div class="contents-cart__main">
+              <h2 class="contents-cart__find">お支払い方法の選択</h2>
+              <div class="payment-select">
+              
+                <div class="payment-select__list choice">
+                  <label class="payment-select__inner">
+                    <input type="radio" name="payment" checked>
+                    <p class="payment-select__name">保存済のクレジットカード<span class="credit-info">	********1111</span></p>
+                  </label>
+                </div>
+                <div class="payment-select__list">
+                  <label class="payment-select__inner">
+                    <input type="radio" name="payment">
+                    <p class="payment-select__name">新しいクレジットカード</p>
+                    <div class="payment-select__card">
+                      <div class="card-name">
+                        <label>カード名義人（半角ローマ字）</label>
+                        <input type="text" placeholder="カード名義人（半角ローマ字）">
+                      </div>
+                      <div class="card-num">
+                        <label>カード番号</label>
+                        <input type="text" placeholder="カード番号">
+                      </div>
+                      <div class="card-remit">
+                        <label>有効期限</label>
+                        <select>
+                          <option varlue="01">01</option>
+                          <option varlue="02">02</option>
+                          <option varlue="03">03</option>
+                          <option varlue="04">04</option>
+                          <option varlue="05">05</option>
+                          <option varlue="06">06</option>
+                          <option varlue="07">07</option>
+                          <option varlue="08">08</option>
+                          <option varlue="09">09</option>
+                          <option varlue="10">10</option>
+                          <option varlue="11">11</option>
+                          <option varlue="12">12</option>
+                        </select>
+                        <select>
+                          <option varlue="2017">2017</option>
+                          <option varlue="2018">2018</option>
+                          <option varlue="2019">2019</option>
+                          <option varlue="2020">2020</option>
+                        </select>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="payment-select__list">
+                  <label class="payment-select__inner">
+                    <input type="radio" name="payment">
+                    <p class="payment-select__name">BitCoin</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>

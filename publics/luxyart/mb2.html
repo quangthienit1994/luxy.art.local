@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<title>Luxyart管理機能</title>
+		<meta charset="utf-8">
+		<meta name="keywords" content="キーワード" />
+		<meta name="description" content="説明文">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/pc.css"><!-- PC Layout CSS -->
+		<link rel="stylesheet" href="css/colorbox.css"><!-- PC Layout CSS -->
+		<!--&#91;if lt IE 9&#93;>
+		<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<!&#91;endif&#93;-->
+		<meta name="mobile-web-app-capable" content="yes">		<link rel="canonical" href=""> 
+<link rel="apple-touch-icon-precomposed" href="img/common/ico.png"> 
+		
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		
+		<!--	 JavaScript Area Start	-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<script>
+				$(function() {
+				  var h = $(window).height();
+				 
+				  $('#wrap').css('display','none');
+				  $('#loader-bg ,#loader').height(h).css('display','block');
+				});
+				 
+				$(window).load(function () { //全ての読み込みが完了したら実行
+				  $('#loader-bg').delay(900).fadeOut(800);
+				  $('#loader').delay(600).fadeOut(300);
+				  $('#wrap').css('display', 'block');
+				});
+				 
+				//10秒たったら強制的にロード画面を非表示
+				$(function(){
+				  setTimeout('stopload()',10000);
+				});
+				 
+				function stopload(){
+				  $('#wrap').css('display','block');
+				  $('#loader-bg').delay(900).fadeOut(800);
+				  $('#loader').delay(600).fadeOut(300);
+				}
+			</script>
+			<script src="js/jquery.colorbox.js"></script>
+			<script>
+				$(document).ready(function(){
+					//Examples of how to assign the Colorbox event to elements
+					$(".iframe").colorbox({iframe:true, width:"600px", height:"320px"});
+					$(".callbacks").colorbox({
+						onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+						onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+						onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+						onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+						onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+					});
+	
+					$('.non-retina').colorbox({rel:'group5', transition:'none'})
+					$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+					
+					//Example of preserving a JavaScript event for inline calls.
+					$("#click").click(function(){ 
+						$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+						return false;
+					});
+				});
+			</script>
+			<script>
+				function disp(){
+				
+					if(window.confirm('削除してよろしいですか？')){
+				
+						location.href = "mb2.html"; // example_confirm.html へジャンプ
+				
+					}
+					// 「OK」時の処理終了
+				
+					// 「キャンセル」時の処理開始
+					else{
+				
+						window.alert('キャンセルされました'); // 警告ダイアログを表示
+				
+					}
+					// 「キャンセル」時の処理終了
+				
+				}
+				
+			</script>
+		<!--	 JavaScript Area End	-->	
+	</head>
+<body>
+	<div id="loader-bg">
+		<div id="loader">
+			<img src="img/common/img-loading.gif" width="80" height="80" alt="Now Loading..." />
+			<p>Now Loading...</p>
+		</div>
+	</div>
+
+
+
+	<div id="wrap">
+		<header class="main_head">
+			<p><img src="img/common/luxyart_logo.png" alt=""></p>
+			<p>お知らせエリア</p>
+		</header>
+		<div id="main_content">
+			<section class="left">
+				<nav class="main_nav">
+					<ul>
+						<li class="bd1"><a href="main.html"></a>メイン</li>
+						<li class="bd2"><a href="mb2.html"></a>お知らせ管理</li>
+						<li class="bd2"><a href="mb2b.html"></a>会員管理</li>
+						<li class="bd3"><a href="mb3.html"></a>売上管理</li>
+						<li class="bd4"><a href="mb4.html"></a>ピックアップ選択</li>
+						<li class="bd5"><a href="mb5.html"></a>登録画像検索</li>
+						<li class="bd5"><a href="mb5b.html"></a>画像チェック</li>
+						<li class="bd6"><a href="mb6.html"></a>管理ユーザー管理</li>
+						<li class="bd7"><a href="index.html"></a>ログアウト</li>
+					</ul>
+				</nav>
+			</section>
+			<section class="main u_cont">
+				<h2 class="bd2">お知らせ管理</h2>
+					<section class="content_box">
+						<h3>新規登録</h3>
+							<form method="post" action="">
+								<div class="info_area">
+									<p>お知らせタイトル</p>
+										<p><input type="text" placeholder="お知らせタイトルを入力してください"></p>
+									<p>お知らせ内容</p>
+										<p><textarea placeholder="お知らせ内容を入力してください"></textarea></p>
+									<p>公開日時</p>
+										<p>
+											<select>
+												<option>2017</option>
+												<option>2018</option>
+												<option>2019</option>
+												</select>&nbsp;年&nbsp;
+											<select>
+												<option>01</option>
+												<option>02</option>
+												<option>03</option>
+												<option>04</option>
+												<option>05</option>
+												<option>06</option>
+												<option>07</option>
+												<option>08</option>
+												<option>09</option>
+												<option>10</option>
+												<option>11</option>
+												<option>12</option>
+												</select>&nbsp;月&nbsp;
+											<select>
+												<option>01</option>
+												<option>02</option>
+												<option>03</option>
+												<option>04</option>
+												<option>05</option>
+												<option>06</option>
+												<option>07</option>
+												<option>08</option>
+												<option>09</option>
+												<option>10</option>
+												<option>11</option>
+												<option>12</option>
+												<option>13</option>
+												<option>14</option>
+												<option>15</option>
+												<option>16</option>
+												<option>17</option>
+												<option>18</option>
+												<option>19</option>
+												<option>20</option>
+												<option>21</option>
+												<option>22</option>
+												<option>23</option>
+												<option>24</option>
+												<option>25</option>
+												<option>26</option>
+												<option>27</option>
+												<option>28</option>
+												<option>29</option>
+												<option>30</option>
+												<option>31</option>
+												</select>&nbsp;日&nbsp;公開
+									</p>
+									<div class="info_button">
+										<input type="submit" value="登録">
+									</div>
+								</div>
+
+							</form>
+					</section>
+
+					<section class="content_box">
+						<h3>お知らせ一覧</h3>
+						<article class="info_table">
+							<table class="">
+								<tr>
+									<th>公開日時</th>
+									<th>タイトル</th>
+									<th>おしらせ内容</th>
+									<th>Control</th>
+								</tr>
+								<tr>
+									<td>2017年09月01日</td>
+									<td>サイトオープン</td>
+									<td>ああああああああああああああああああああああああああああああああああああああああああああああああああああああ</td>
+									<td><a class="iframe" href="info_check.html">確認</a><a onClick="disp()">削除</a></td>
+								</tr>
+
+								<tr>
+									<td>2017年09月01日</td>
+									<td>サイトオープン</td>
+									<td>ああああああああああああああああああああああああああああああああああああああああああああああああああああああ</td>
+									<td><a class="iframe" href="info_check.html">確認</a><a onClick="disp()">削除</a></td>
+								</tr>
+
+								<tr>
+									<td>2017年09月01日</td>
+									<td>サイトオープン</td>
+									<td>ああああああああああああああああああああああああああああああああああああああああああああああああああああああ</td>
+									<td><a class="iframe" href="info_check.html">確認</a><a onClick="disp()">削除</a></td>
+								</tr>
+
+								<tr>
+									<td>2017年09月01日</td>
+									<td>サイトオープン</td>
+									<td>ああああああああああああああああああああああああああああああああああああああああああああああああああああああ</td>
+									<td><a class="iframe" href="info_check.html">確認</a><a onClick="disp()">削除</a></td>
+								</tr>
+
+							</table>
+						</article>
+					</section>
+
+			</section>
+		</div>
+		<footer class="main_foot">
+			<p>Copyright&nbsp;&copy;&nbsp;LuxyArt.&nbsp;All&nbsp;Rights&nbsp;Reserved.</p>
+		</footer>
+	</div>
+</body>
+</html>

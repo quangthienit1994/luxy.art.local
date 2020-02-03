@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<title>Luxyart管理機能</title>
+		<meta charset="utf-8">
+		<meta name="keywords" content="キーワード" />
+		<meta name="description" content="説明文">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/pc.css"><!-- PC Layout CSS -->
+		
+		<!--&#91;if lt IE 9&#93;>
+		<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<!&#91;endif&#93;-->
+		<meta name="mobile-web-app-capable" content="yes">		<link rel="canonical" href=""> 
+<link rel="apple-touch-icon-precomposed" href="img/common/ico.png"> 
+		
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		
+		<!--	 JavaScript Area Start	-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<script>
+			$(function() {
+			  var h = $(window).height();
+			 
+			  $('#wrap').css('display','none');
+			  $('#loader-bg ,#loader').height(h).css('display','block');
+			});
+			 
+			$(window).load(function () { //全ての読み込みが完了したら実行
+			  $('#loader-bg').delay(900).fadeOut(800);
+			  $('#loader').delay(600).fadeOut(300);
+			  $('#wrap').css('display', 'block');
+			});
+			 
+			//10秒たったら強制的にロード画面を非表示
+			$(function(){
+			  setTimeout('stopload()',10000);
+			});
+			 
+			function stopload(){
+			  $('#wrap').css('display','block');
+			  $('#loader-bg').delay(900).fadeOut(800);
+			  $('#loader').delay(600).fadeOut(300);
+			}
+			</script>
+		<!--	 JavaScript Area End	-->	
+	</head>
+<body>
+	<div id="loader-bg">
+		<div id="loader">
+			<img src="img/common/img-loading.gif" width="80" height="80" alt="Now Loading..." />
+			<p>Now Loading...</p>
+		</div>
+	</div>
+
+
+
+	<div id="wrap">
+		<header class="main_head">
+			<p><img src="img/common/luxyart_logo.png" alt=""></p>
+			<p>お知らせエリア</p>
+		</header>
+		<div id="main_content">
+			<section class="left">
+				<nav class="main_nav">
+					<ul>
+						<li class="bd1"><a href="main.html"></a>メイン</li>
+						<li class="bd2"><a href="mb2.html"></a>お知らせ管理</li>
+						<li class="bd2"><a href="mb2b.html"></a>会員管理</li>
+						<li class="bd3"><a href="mb3.html"></a>売上管理</li>
+						<li class="bd4"><a href="mb4.html"></a>ピックアップ選択</li>
+						<li class="bd5"><a href="mb5.html"></a>登録画像検索</li>
+						<li class="bd5"><a href="mb5b.html"></a>画像チェック</li>
+						<li class="bd6"><a href="mb6.html"></a>管理ユーザー管理</li>
+						<li class="bd7"><a href="index.html"></a>ログアウト</li>
+					</ul>
+				</nav>
+			</section>
+			<section class="main u_cont">
+				<h2 class="bd3">売上管理</h2>
+					<section class="content_box">
+						<h3>売上管理メニュー</h3>
+						<div class="edit_button3a">
+								<div class="edit_button3">
+									<form method="post" action="">
+										<input type="submit" value="日別CSV出力">
+									</form>
+								</div>
+								<div class="edit_button3">
+									<form method="post" action="">
+										<input type="submit" value="月間CSV出力">
+									</form>
+								</div>
+								<div class="edit_button3">
+									<form method="post" action="">
+										<input type="submit" value="決済未CSV出力">
+									</form>
+								</div>
+								<div class="edit_button3">
+									<form method="post" action="">
+										<input type="submit" value="総売上CSV出力">
+									</form>
+								</div>
+						</div>
+					</section>
+
+					<section class="content_box">
+						<h3>売上ボード</h3>
+						<div class="content_box3a">
+							<div class="box3a_conts">
+								<div class="">
+									<p>■ 全会員の保有ポイント</p>
+									<p>1,000,000,000pt</p>
+								</div>
+							</div>
+							<div class="box3a_conts">
+								<div class="">
+									<p>■ 日間利用ポイント数</p>
+									<p>1,000,000,000pt</p>
+								</div>
+							</div>
+							<div class="box3a_conts">
+								<div class="">
+									<p>■ 月間利用ポイント数</p>
+									<p>1,000,000,000pt</p>
+								</div>
+							</div>
+							<div class="box3a_conts">
+								<div class="">
+									<p>■ 本日の購入ポイント数</p>
+									<p>1,000,000,000pt</p>
+								</div>
+							</div>
+							<div class="box3a_conts">
+								<div class="">
+									<p>■ 月間購入ポイント数</p>
+									<p>1,000,000,000pt</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="content_box">
+						<h3>売上情報（日報）</h3>
+						<div class="content_box3b">
+							<table>
+								<tr>
+									<th>スクリーンネーム</th>
+									<th>ログインID</th>
+									<th>決済ステータス</th>
+									<th>決済種別</th>
+									<th>会員種別</th>
+									<th>保有ポイント</th>
+								</tr>
+
+								<tr>
+									<td>Taro Yamada</td>
+									<td>Yamada_taro</td>
+									<td><span class="red">決済待ち</span></td>
+									<td>銀行振込</td>
+									<td>ゴールドクリエイター会員</td>
+									<td>1,000,000,000</td>
+								</tr>
+
+								<tr>
+									<td>Taro Yamada</td>
+									<td>Yamada_taro</td>
+									<td>決済済み</td>
+									<td>クレジットカード決済</td>
+									<td>ゴールドクリエイター会員</td>
+									<td>1,000,000,000</td>
+								</tr>
+							
+							</table>
+						</div>
+					</section>
+
+
+
+
+			</section>
+		</div>
+		<footer class="main_foot">
+			<p>Copyright&nbsp;&copy;&nbsp;LuxyArt.&nbsp;All&nbsp;Rights&nbsp;Reserved.</p>
+		</footer>
+	</div>
+</body>
+</html>

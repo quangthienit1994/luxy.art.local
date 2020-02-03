@@ -1,0 +1,56 @@
+$.datepicker.regional["vi-VN"] = {
+	closeText: "Đóng",
+	prevText: "Trước",
+	nextText: "Sau",
+	currentText: "Hôm nay",
+	monthNames: ["Tháng một", "Tháng hai", "Tháng ba", "Tháng tư", "Tháng năm", "Tháng sáu", "Tháng bảy", "Tháng tám", "Tháng chín", "Tháng mười", "Tháng mười một", "Tháng mười hai"],
+	monthNamesShort: ["T.Một", "T.Hai", "T.Ba", "T.Bốn", "T.Năm", "T.Sáu", "T.Bảy", "T.Tám", "T.Chín", "T.Mười", "T.Mười một", "T.Mười hai"],
+	dayNames: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"],
+	dayNamesShort: ["CN", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"],
+	dayNamesMin: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
+	weekHeader: "Tuần",
+	dateFormat: "dd/mm/yy",
+	firstDay: 1,
+	isRTL: false,
+	showMonthAfterYear: false,
+	yearSuffix: ""
+};
+
+$.datepicker.regional['ja-JP'] = {
+	closeText: '閉じる',
+	prevText: '<前',
+	nextText: '次>',
+	currentText: '今日',
+	monthNames: ['1月','2月','3月','4月','5月','6月',
+	'7月','8月','9月','10月','11月','12月'],
+	monthNamesShort: ['1月','2月','3月','4月','5月','6月',
+	'7月','8月','9月','10月','11月','12月'],
+	dayNames: ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'],
+	dayNamesShort: ['日','月','火','水','木','金','土'],
+	dayNamesMin: ['日','月','火','水','木','金','土'],
+	weekHeader: '週',
+	dateFormat: 'yy/mm/dd',
+	firstDay: 0,
+	isRTL: false,
+	showMonthAfterYear: true,
+	yearSuffix: '年'};
+
+$.datepicker.regional['en-US'] = {
+	closeText: 'Done',
+	prevText: 'Prev',
+	nextText: 'Next',
+	currentText: 'Today',
+	monthNames: ['January','February','March','April','May','June',
+	'July','August','September','October','November','December'],
+	monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+	'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+	dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+	dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+	dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+	weekHeader: 'Wk',
+	dateFormat: 'mm/dd/yy',
+	firstDay: 1,
+	isRTL: false,
+	showMonthAfterYear: false,
+	yearSuffix: ''};
+

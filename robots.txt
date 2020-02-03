@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Sitemap: https://luxy.art/listimages.xml
+Sitemap: https://luxy.art/category.xml
+Sitemap: https://luxy.art/usertimeline.xml
+Sitemap: https://luxy.art/anotherpage.xml

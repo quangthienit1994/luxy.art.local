@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'sf-light';
+    src: url('sfuidisplay-light-webfont.eot');
+    src: url('sfuidisplay-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sfuidisplay-light-webfont.woff2') format('woff2'),
+         url('sfuidisplay-light-webfont.woff') format('woff'),
+         url('sfuidisplay-light-webfont.ttf') format('truetype'),
+         url('sfuidisplay-light-webfont.svg#sf_ui_displaylight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sf-medium';
+    src: url('sfuidisplay-medium-webfont.eot');
+    src: url('sfuidisplay-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sfuidisplay-medium-webfont.woff2') format('woff2'),
+         url('sfuidisplay-medium-webfont.woff') format('woff'),
+         url('sfuidisplay-medium-webfont.ttf') format('truetype'),
+         url('sfuidisplay-medium-webfont.svg#sf_ui_displaymedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

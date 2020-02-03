@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>Luxyart管理機能</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="キーワード" />
+	<meta name="description" content="説明文">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/pc.css"><!-- PC Layout CSS -->
+	
+	<meta name="mobile-web-app-capable" content="yes">		
+	<link rel="canonical" href=""> 
+	<link rel="apple-touch-icon-precomposed" href="img/common/ico.png"> 
+	
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	
+	<!--	 JavaScript Area Start	-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		$(function() {
+		  var h = $(window).height();
+		 
+		  $('#wrap').css('display','none');
+		  $('#loader-bg ,#loader').height(h).css('display','block');
+		});
+		 
+		$(window).load(function () { //全ての読み込みが完了したら実行
+		  $('#loader-bg').delay(900).fadeOut(800);
+		  $('#loader').delay(600).fadeOut(300);
+		  $('#wrap').css('display', 'block');
+		});
+		 
+		//10秒たったら強制的にロード画面を非表示
+		$(function(){
+		  setTimeout('stopload()',10000);
+		});
+		 
+		function stopload(){
+		  $('#wrap').css('display','block');
+		  $('#loader-bg').delay(900).fadeOut(800);
+		  $('#loader').delay(600).fadeOut(300);
+		}
+	</script>
+
+	<!--	 JavaScript Area End	-->	
+</head>
+<body>
+	<div id="loader-bg">
+		<div id="loader">
+			<img src="img/common/img-loading.gif" width="80" height="80" alt="Now Loading..." />
+			<p>Now Loading...</p>
+		</div>
+	</div>
+
+
+
+	<div id="wrap">
+		<header class="main_head">
+			<p><img src="img/common/luxyart_logo.png" alt=""></p>
+			<p>お知らせエリア</p>
+		</header>
+		<div id="main_content">
+			<section class="left">
+				<nav class="main_nav">
+					<ul>
+						<li class="bd1"><a href="main.html"></a>メイン</li>
+						<li class="bd2"><a href="mb2.html"></a>お知らせ管理</li>
+						<li class="bd2"><a href="mb2b.html"></a>会員管理</li>
+						<li class="bd3"><a href="mb3.html"></a>売上管理</li>
+						<li class="bd4"><a href="mb4.html"></a>ピックアップ選択</li>
+						<li class="bd5"><a href="mb5.html"></a>登録画像検索</li>
+						<li class="bd5"><a href="mb5b.html"></a>画像チェック</li>
+						<li class="bd6"><a href="mb6.html"></a>管理ユーザー管理</li>
+						<li class="bd7"><a href="index.html"></a>ログアウト</li>
+					</ul>
+				</nav>
+			</section>
+			<section class="main">
+				<article class="main_board">
+					<div class="mb bd2">
+						<h2 class="bdu2">会員管理</h2>
+						<div class="mb_bd2_cont">
+							<div class="mb_bd2_c">
+								<p>■&nbsp;プラチナクリエイター数</p>
+									<p>1,000,000,000人</p>
+							</div>
+							<div class="mb_bd2_c">
+								<p>■&nbsp;ゴールドクリエイター数</p>
+									<p>1,000,000,000人</p>
+							</div>
+							<div class="mb_bd2_c">
+								<p>■&nbsp;クリエイター数</p>
+									<p>1,000,000,000人</p>
+							</div>
+							<div class="mb_bd2_c">
+								<p>■&nbsp;一般ユーザー数</p>
+									<p>1,000,000,000人</p>
+							</div>
+							<div class="mb_bd2_c">
+								<p>■&nbsp;法人ユーザー数</p>
+									<p>1,000,000,000人</p>
+							</div>
+						</div>
+						
+					</div>
+
+<!--- 売上管理 Start   -->
+					<div class="mb bd3">
+						<h2 class="bdu3">売上管理</h2>
+						<div class="mb_bd2_cont">
+							<div class="mb_bd2_c">
+								<p>■&nbsp;全会員の保有ポイント</p>
+									<p>1,000,000,000pt</p>
+							</div>
+							<div class="mb_bd2_c">
+								<p>■&nbsp;日間利用ポイント数</p>
+									<p>1,000,000,000pt</p>
+							</div>
+							<div class="mb_bd2_c">
+								<p>■&nbsp;月間利用ポイント数</p>
+									<p>1,000,000,000pt</p>
+							</div>
+							<div class="mb_bd2_c">
+								<p>■&nbsp;本日の購入ポイント数</p>
+									<p>1,000,000,000pt</p>
+							</div>
+							<div class="mb_bd2_c">
+								<p>■&nbsp;月間購入ポイント数</p>
+									<p>1,000,000,000pt</p>
+							</div>
+						</div>
+					</div>
+<!--- 売上管理 End   -->
+
+
+					<div class="mb bd4">
+						<h2 class="bdu4">ピックアップ</h2>
+						<div class="mb_bd4_cont">
+							<div class="mb_bd4_c">
+								<p><img src="images/pick_001.jpg"></p>
+								<p>ああああああああああああああああああああ<br>投稿数：30</p>
+							</div>
+							<div class="mb_bd4_c">
+								<p><img src="images/pick_002.jpg"></p>
+								<p>ああああああああああああああああああああ<br>投稿数：30</p>
+							</div>
+							<div class="mb_bd4_c">
+								<p><img src="images/pick_002.jpg"></p>
+								<p>ああああああああああああああああああああ<br>投稿数：30</p>
+							</div>
+							<div class="mb_bd4_c">
+								<p><img src="images/pick_001.jpg"></p>
+								<p>ああああああああああああああああああああ<br>投稿数：30</p>
+							</div>
+							<div class="mb_bd4_c">
+								<p><img src="images/pick_001.jpg"></p>
+								<p>ああああああああああああああああああああ<br>投稿数：30</p>
+							</div>
+							<div class="mb_bd4_c">
+								<p><img src="images/pick_002.jpg"></p>
+								<p>ああああああああああああああああああああ<br>投稿数：30</p>
+							</div>
+							<div class="mb_bd4_c">
+								<p><img src="images/pick_002.jpg"></p>
+								<p>ああああああああああああああああああああ<br>投稿数：30</p>
+							</div>
+							<div class="mb_bd4_c">
+								<p><img src="images/pick_001.jpg"></p>
+								<p>ああああああああああああああああああああ<br>投稿数：30</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="mb bd5">
+						<h2 class="bdu5">登録画像（現在の登録枚数：200,000枚）</h2>
+							<div class="mbds5"><h3>最新登録画像</h3></div>
+								<div class="mb_bd5_cont">
+									<div class="mb_bd5_c">
+										<p><img src="images/thum_001.jpg"></p>
+										<p><img src="images/thum_002.jpg"></p>
+										<p><img src="images/thum_003.jpg"></p>
+										<p><img src="images/thum_004.jpg"></p>
+										<p><img src="images/thum_005.jpg"></p>
+										<p><img src="images/thum_006.jpg"></p>
+										<p><img src="images/thum_001.jpg"></p>
+										<p><img src="images/thum_002.jpg"></p>
+									</div>
+								</div>
+					</div>
+
+
+				</article>				
+			</section>
+		</div>
+		<footer class="main_foot">
+			<p>Copyright&nbsp;&copy;&nbsp;LuxyArt.&nbsp;All&nbsp;Rights&nbsp;Reserved.</p>
+		</footer>
+	</div>
+</body>
+</html>

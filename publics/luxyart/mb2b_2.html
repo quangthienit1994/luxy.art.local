@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<title>Luxyart管理機能</title>
+		<meta charset="utf-8">
+		<meta name="keywords" content="キーワード" />
+		<meta name="description" content="説明文">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/pc.css"><!-- PC Layout CSS -->
+		
+		<!--&#91;if lt IE 9&#93;>
+		<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<!&#91;endif&#93;-->
+		<meta name="mobile-web-app-capable" content="yes">		<link rel="canonical" href=""> 
+<link rel="apple-touch-icon-precomposed" href="img/common/ico.png"> 
+		
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		
+		<!--	 JavaScript Area Start	-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<script>
+			$(function() {
+			  var h = $(window).height();
+			 
+			  $('#wrap').css('display','none');
+			  $('#loader-bg ,#loader').height(h).css('display','block');
+			});
+			 
+			$(window).load(function () { //全ての読み込みが完了したら実行
+			  $('#loader-bg').delay(900).fadeOut(800);
+			  $('#loader').delay(600).fadeOut(300);
+			  $('#wrap').css('display', 'block');
+			});
+			 
+			//10秒たったら強制的にロード画面を非表示
+			$(function(){
+			  setTimeout('stopload()',10000);
+			});
+			 
+			function stopload(){
+			  $('#wrap').css('display','block');
+			  $('#loader-bg').delay(900).fadeOut(800);
+			  $('#loader').delay(600).fadeOut(300);
+			}
+			</script>
+			<script>
+				function disp(){
+				
+					if(window.confirm('削除してよろしいですか？')){
+				
+						location.href = "mb2b.html"; // example_confirm.html へジャンプ
+				
+					}
+					// 「OK」時の処理終了
+				
+					// 「キャンセル」時の処理開始
+					else{
+				
+						window.alert('キャンセルされました'); // 警告ダイアログを表示
+				
+					}
+					// 「キャンセル」時の処理終了
+				
+				}
+				
+			</script>
+		<!--	 JavaScript Area End	-->	
+	</head>
+<body>
+	<div id="loader-bg">
+		<div id="loader">
+			<img src="img/common/img-loading.gif" width="80" height="80" alt="Now Loading..." />
+			<p>Now Loading...</p>
+		</div>
+	</div>
+
+
+
+	<div id="wrap">
+		<header class="main_head">
+			<p><img src="img/common/luxyart_logo.png" alt=""></p>
+			<p>お知らせエリア</p>
+		</header>
+		<div id="main_content">
+			<section class="left">
+				<nav class="main_nav">
+					<ul>
+						<li class="bd1"><a href="main.html"></a>メイン</li>
+						<li class="bd2"><a href="mb2.html"></a>お知らせ管理</li>
+						<li class="bd2"><a href="mb2b.html"></a>会員管理</li>
+						<li class="bd3"><a href="mb3.html"></a>売上管理</li>
+						<li class="bd4"><a href="mb4.html"></a>ピックアップ選択</li>
+						<li class="bd5"><a href="mb5.html"></a>登録画像検索</li>
+						<li class="bd5"><a href="mb5b.html"></a>画像チェック</li>
+						<li class="bd6"><a href="mb6.html"></a>管理ユーザー管理</li>
+						<li class="bd7"><a href="index.html"></a>ログアウト</li>
+					</ul>
+				</nav>
+			</section>
+			<section class="main u_cont">
+				<h2 class="bd2">会員管理</h2>				
+					<section class="content_box">
+						<h3>会員情報編集</h3>
+						<article class="member_edit">
+							<h4>ユーザー情報</h4>
+								<form method="post" action="">
+									<div class="edit_conts">
+										<p>会員種別</p>
+										<p>ゴールド会員</p>
+										<p class="edit_ch"><select>
+											<option>選択してください</option>
+											<option>無料会員</option>
+											<option>クリエイター会員</option>
+											<option>ゴールドクリエイター会員</option>
+											<option>プラチナクリエイター会員</option>
+											<option>法人会員</option>
+											</select></p>
+									</div>
+	
+									<div class="edit_conts">
+										<p>スクリーンネーム</p>
+										<p>Yamada Hanako</p>
+										<p><input type="text" placeholder="スクリーンネームを入力してください"></p>
+									</div>
+	
+									<div class="edit_conts">
+										<p>メールアドレス</p>
+										<p>info@luxyart.jp</p>
+										<p><input type="email" placeholder="メールアドレスを入力してください"></p>
+									</div>
+
+									<div class="edit_conts">
+										<p>パスワード</p>
+										<p>＊＊＊＊＊＊＊＊＊＊</p>
+										<p><input type="text" placeholder="パスワードを入力してください"></p>
+									</div>
+
+									<div class="edit_conts">
+										<p>保有ポイント</p>
+										<p>100</p>
+										<p><input type="text" placeholder="ポイントを入力してください"></p>
+									</div>
+
+
+									<div class="edit_button">
+										<input type="submit" value="修正">
+									</div>
+
+								</form>
+						</article>
+
+						<article class="member_edit">
+							<h4>決済情報</h4>
+								<form method="post" action="">
+
+									<div class="edit_conts">
+										<p>決済ステータス</p>
+										<p>例）決済済み</p>
+										<p class="edit_ch"><select>
+											<option>選択してください</option>
+											<option>決済待ち</option>
+											<option>決済済み</option>
+											</select></p>
+									</div>
+
+									<div class="edit_conts">
+										<p>決済種別</p>
+										<p>カード決済</p>
+										<p class="edit_ch"><select>
+											<option>選択してください</option>
+											<option>カード決済</option>
+											<option>銀行振込</option>
+											<option>ビットコイン</option>
+											<option>コンビニ決済</option>
+											</select></p>
+									</div>
+
+
+									<div class="edit_conts">
+										<p>カード種別</p>
+										<p>VISA</p>
+										<p class="edit_ch"><select>
+											<option>選択してください</option>
+											<option>VISA</option>
+											<option>MASTER</option>
+											<option>JCB</option>
+											<option>DINNERS</option>
+											<option>AMEX</option>
+											</select></p>
+									</div>
+	
+									<div class="edit_conts">
+										<p>カード番号</p>
+										<p>********0000</p>
+										<p><input type="text" placeholder="カード番号を入力してください"></p>
+									</div>
+	
+									<div class="edit_conts">
+										<p>有効期限</p>
+										<p>2017/12</p>
+										<p class="dates">
+											<select name="select" >
+												<option value="">--</option>
+												<option value="2017">2017</option>
+												<option value="2018">2018</option>
+												<option value="2019">2019</option>
+												<option value="2020">2020</option>
+												<option value="2021">2021</option>
+												<option value="2022">2022</option>
+												<option value="2023">2023</option>
+												<option value="2024">2024</option>
+												<option value="2025">2025</option>
+												<option value="2026">2026</option>
+												<option value="2027">2027</option>
+												<option value="2028">2028</option>
+												<option value="2029">2029</option>
+												<option value="2030">2030</option>
+												</select>
+												年
+											<select name="month">
+												<option value="">--</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												</SELECT>
+												月
+										</p>
+									</div>
+	
+									<div class="edit_conts">
+										<p>名義人</p>
+										<p>YAMADA HANAKO</p>
+										<p><input type="text" placeholder="カード名義人を入力してください"></p>
+									</div>
+	
+									<div class="edit_button">
+										<input type="submit" value="修正">
+									</div>
+								</form>
+
+
+						</article>
+
+
+					</section>
+
+
+
+			</section>
+		</div>
+		<footer class="main_foot">
+			<p>Copyright&nbsp;&copy;&nbsp;LuxyArt.&nbsp;All&nbsp;Rights&nbsp;Reserved.</p>
+		</footer>
+	</div>
+</body>
+</html>

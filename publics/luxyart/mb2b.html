@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<title>Luxyart管理機能</title>
+		<meta charset="utf-8">
+		<meta name="keywords" content="キーワード" />
+		<meta name="description" content="説明文">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/pc.css"><!-- PC Layout CSS -->
+		
+		<!--&#91;if lt IE 9&#93;>
+		<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<!&#91;endif&#93;-->
+		<meta name="mobile-web-app-capable" content="yes">		<link rel="canonical" href=""> 
+<link rel="apple-touch-icon-precomposed" href="img/common/ico.png"> 
+		
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		
+		<!--	 JavaScript Area Start	-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<script>
+			$(function() {
+			  var h = $(window).height();
+			 
+			  $('#wrap').css('display','none');
+			  $('#loader-bg ,#loader').height(h).css('display','block');
+			});
+			 
+			$(window).load(function () { //全ての読み込みが完了したら実行
+			  $('#loader-bg').delay(900).fadeOut(800);
+			  $('#loader').delay(600).fadeOut(300);
+			  $('#wrap').css('display', 'block');
+			});
+			 
+			//10秒たったら強制的にロード画面を非表示
+			$(function(){
+			  setTimeout('stopload()',10000);
+			});
+			 
+			function stopload(){
+			  $('#wrap').css('display','block');
+			  $('#loader-bg').delay(900).fadeOut(800);
+			  $('#loader').delay(600).fadeOut(300);
+			}
+			</script>
+			<script>
+				function disp(){
+				
+					if(window.confirm('削除してよろしいですか？')){
+				
+						location.href = "mb2b.html"; // example_confirm.html へジャンプ
+				
+					}
+					// 「OK」時の処理終了
+				
+					// 「キャンセル」時の処理開始
+					else{
+				
+						window.alert('キャンセルされました'); // 警告ダイアログを表示
+				
+					}
+					// 「キャンセル」時の処理終了
+				
+				}
+				
+			</script>
+		<!--	 JavaScript Area End	-->	
+	</head>
+<body>
+	<div id="loader-bg">
+		<div id="loader">
+			<img src="img/common/img-loading.gif" width="80" height="80" alt="Now Loading..." />
+			<p>Now Loading...</p>
+		</div>
+	</div>
+
+
+
+	<div id="wrap">
+		<header class="main_head">
+			<p><img src="img/common/luxyart_logo.png" alt=""></p>
+			<p>お知らせエリア</p>
+		</header>
+		<div id="main_content">
+			<section class="left">
+				<nav class="main_nav">
+					<ul>
+						<li class="bd1"><a href="main.html"></a>メイン</li>
+						<li class="bd2"><a href="mb2.html"></a>お知らせ管理</li>
+						<li class="bd2"><a href="mb2b.html"></a>会員管理</li>
+						<li class="bd3"><a href="mb3.html"></a>売上管理</li>
+						<li class="bd4"><a href="mb4.html"></a>ピックアップ選択</li>
+						<li class="bd5"><a href="mb5.html"></a>登録画像検索</li>
+						<li class="bd5"><a href="mb5b.html"></a>画像チェック</li>
+						<li class="bd6"><a href="mb6.html"></a>管理ユーザー管理</li>
+						<li class="bd7"><a href="index.html"></a>ログアウト</li>
+					</ul>
+				</nav>
+			</section>
+			<section class="main u_cont">
+				<h2 class="bd2">会員管理</h2>
+					<section class="content_box">
+						<h3>会員管理メニュー</h3>
+						<div class="edit_button2a">
+								<div class="edit_button2">
+									<form method="post" action="">
+										<input type="submit" value="CSV出力">
+									</form>
+								</div>
+								<div class="edit_button2">
+									<form method="post" action="mb2b_1.html">
+										<input type="submit" value="新規作成">
+									</form>
+								</div>
+
+						</div>
+					</section>
+					<section class="content_box">
+						<h3>会員検索</h3>
+						<article class="search_text">
+							<p>検索条件を設定し検索してください。</p>
+						</article>
+						<form method="post" action="">
+							<article class="search_area">
+								<div class="search_area_cont">
+									<p>会員種別</p>
+									<p class="search_2"><select>
+										<option>--- 選択してください ---</option>
+										<option>無料会員</option>
+										<option>クリエイター会員</option>
+										<option>ゴールドクリエイター会員</option>
+										<option>プラチナクリエイター会員</option>
+										<option>法人会員</option>
+										</select></p>
+								</div>
+								<div class="search_area_cont">
+									<p>フリーワード</p>
+									<p class="search_2"><input type="text" placeholder="テキストを入力してください"></p>
+								</div>
+								<div class="search_button">
+									<p class="search_2"><input type="submit" value="検索"></p>
+								</div>
+							</article>
+						</form>
+					</section>
+				
+					<section class="content_box">
+						<article class="member_info">
+							<table>
+								<tr>
+									<th>会員グレード</th>
+									<th>ユーザーネーム</th>
+									<th>保有ポイント</th>
+									<th>登録画像数</th>
+									<th>販売画像数</th>
+									<th>購入画像数</th>
+									<th>Control</th>
+								</tr>
+								
+								
+								<tr>
+									<td>プラチナクリエイター会員</td>
+									<td>山田太郎</td>
+									<td>100</td>
+									<td>100</td>
+									<td>30</td>
+									<td>30</td>
+									<td><a href="mb2b_2.html">編集</a><a onClick="disp()">削除</a></td>
+								</tr>
+								
+								<tr>
+									<td>ゴールドクリエイター会員</td>
+									<td>山田太郎</td>
+									<td>100</td>
+									<td>100</td>
+									<td>30</td>
+									<td>30</td>
+									<td><a href="mb2b_2.html">編集</a><a onClick="disp()">削除</a></td>
+								</tr>
+
+								<tr>
+									<td>クリエイター会員</td>
+									<td>山田太郎</td>
+									<td>100</td>
+									<td>100</td>
+									<td>30</td>
+									<td>30</td>
+									<td><a href="mb2b_2.html">編集</a><a onClick="disp()">削除</a></td>
+								</tr>
+
+								<tr>
+									<td>無料会員</td>
+									<td>山田太郎</td>
+									<td>100</td>
+									<td>100</td>
+									<td>30</td>
+									<td>30</td>
+									<td><a href="mb2b_2.html">編集</a><a onClick="disp()">削除</a></td>
+								</tr>
+
+								<tr>
+									<td>法人会員</td>
+									<td>山田太郎</td>
+									<td>100</td>
+									<td>100</td>
+									<td>30</td>
+									<td>30</td>
+									<td><a href="mb2b_2.html">編集</a><a onClick="disp()">削除</a></td>
+								</tr>
+
+								<tr>
+									<td>プラチナクリエイター会員</td>
+									<td>山田太郎</td>
+									<td>100</td>
+									<td>100</td>
+									<td>30</td>
+									<td>30</td>
+									<td><a href="mb2b_2.html">編集</a><a onClick="disp()">削除</a></td>
+								</tr>
+								
+							</table>
+						</article>
+					</section>
+
+
+
+			</section>
+		</div>
+		<footer class="main_foot">
+			<p>Copyright&nbsp;&copy;&nbsp;LuxyArt.&nbsp;All&nbsp;Rights&nbsp;Reserved.</p>
+		</footer>
+	</div>
+</body>
+</html>
