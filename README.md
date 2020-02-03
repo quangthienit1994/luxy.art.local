@@ -1,2 +1,2 @@
-# luxy.art.local
+# Omotenaship
 Omotenaship for LT Team
