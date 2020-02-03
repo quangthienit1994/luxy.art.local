@@ -105,7 +105,7 @@ $this->lang->load('dich', $ngonngu);
 <div class="top-guideline">
   <div class="top-guideline__filter">
     <div class="top-guideline__box">
-      <h1 class="top-guideline__ttl">LuxyArtで欲しい写真素材を手に入れる2つの方法！</h1>
+      <h1 class="top-guideline__ttl"><?php echo $this->lang->line('site_title'); ?>で欲しい写真素材を手に入れる2つの方法！</h1>
       <div class="top-guideline__column">
         <div class="top-guideline__search">
           <p>出版、テレビCM、商品パッケージなどにも<br />
@@ -272,7 +272,7 @@ $this->lang->load('dich', $ngonngu);
     <h3 class="top-creator-entry__find">スマホで撮った写真で<br />
       お小遣い稼ぎ！</h3>
     <div class="top-creator-entry__text">
-      <p>LuxyArtではあなたのスマートフォンのフォルダの中で眠っている写真でお小遣い稼ぎすることが出来る画像売買サイトです！</p>
+      <p><?php echo $this->lang->line('site_title'); ?>ではあなたのスマートフォンのフォルダの中で眠っている写真でお小遣い稼ぎすることが出来る画像売買サイトです！</p>
     </div>
     <div class="top-creator-entry__btn"><a href="<?php echo base_url()?>creator-entry.html">スマホ１つで簡単無料登録！</a></div>
   </div>
@@ -319,9 +319,9 @@ $this->lang->load('dich', $ngonngu);
 </div>
 <div class="top-app">
   <div class="top-app__wrapper">
-    <h3 class="top-app__find">LuxyArtアプリでスマホから簡単操作!</h3>
+    <h3 class="top-app__find"><?php echo $this->lang->line('site_title'); ?>アプリでスマホから簡単操作!</h3>
     <div class="top-app__text">
-      <p>LuxyArtに画像を投稿したり、お気に入りの画像を簡単管理できる公式アプリです！</p>
+      <p><?php echo $this->lang->line('site_title'); ?>に画像を投稿したり、お気に入りの画像を簡単管理できる公式アプリです！</p>
       <p style="margin-bottom:75px">※アプリは現在開発中</p>
     </div>
     <div class="top-app__btn">
@@ -335,7 +335,7 @@ $this->lang->load('dich', $ngonngu);
 <div class="top-app-sp"><a class="top-app-sp__link">
   <div class="top-app-sp__icon"><img alt="AppStoreからダウンロード-GooglePlayからダウンロード" src="<?php echo base_url(); ?>publics/img/icon-app.png"></div>
   <div class="top-app-sp__text">
-    <p><span>LuxyArtアプリ</span>を<br />
+    <p><span><?php echo $this->lang->line('site_title'); ?>アプリ</span>を<br />
       今すぐダウンロード！</p>
   </div>
   </a></div>

@@ -26,7 +26,7 @@ class Admin extends MY_Admin {
         
         $CI =& get_instance();
         $CI->config->load();
-        $this->lang->load('dich', 'ja');http://luxy.art/admin/page_list_image
+        $this->lang->load('dich', 'ja');
         
     }
 
@@ -159,6 +159,13 @@ class Admin extends MY_Admin {
         return $user_id_code_invite;
     }
 
+    /**
+     * Edited: Quang
+     * Date: 03/02/2020
+     * NOTED:
+     * + Upload filetype error: The filetype you are attempting to upload is not allowed
+     * with jpg file
+     */
     public function upload($key, $name, $folder, $configCustom = []){
         $config['upload_path']    = $folder;
         $config['allowed_types']  = 'gif|GIF|jpg|JPG|png|PNG|jpeg|JPEG';
@@ -167,12 +174,23 @@ class Admin extends MY_Admin {
         $config['max_width']      = 5*2024;
         $config['max_height']     = 5*2024;
         $config['file_name']      = $name;
-        array_merge($config, $configCustom);
+
+        /**
+         * Note By Quang
+         * FIXME: Level code basic error :((
+         */
+        $config = array_merge($config, $configCustom);
+        /** END */
+
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
         if($this->upload->do_upload($key)){
             return $config['file_name'];
         }
+        echo $this->upload->display_errors();
+        var_dump($_FILES);
+        var_dump($config);
+        exit();
         return ['error'=>$this->upload->display_errors()];
     }
     public function deleteFile($path) {
@@ -739,6 +757,13 @@ class Admin extends MY_Admin {
         $this->template->load('admin', 'user/edit', $data, __CLASS__);
     }
 
+    /**
+     * Edited: Quang Nguyen
+     * Date: 03/02/2020
+     * FIXME:
+     * + Error default value field name: user_macode, user_paymoney_getpoint
+     * + Fix default value user_macode to empty string
+     */
     public function add_edit_user() {
     	$this->checkLoginAdmin();
 
@@ -758,13 +783,16 @@ class Admin extends MY_Admin {
 			'user_introduction'     =>   $this->input->post('user_introduction'),
             'user_email'            =>   trim($this->input->post('user_email')),
             'user_level'            =>   $this->input->post('user_level'),
+
+            // Quang Nguyen Fix
+            'user_macode'           => '',
+            'user_paymoney_getpoint'=> ''
     	];
     	if($this->input->post('user_pass') != null){
 			$item['user_pass'] = md5($this->input->post('user_pass'));
 		}
         
         $get_user = $this->getData($id, 'luxyart_tb_user', 'user_id');
-
         if($_FILES['avatar']['name']!=''){
             $upload = $this->upload('avatar','avatar_'.time().'.png', 'publics/avatar');
             if(is_array($upload)){
@@ -2616,7 +2644,6 @@ class Admin extends MY_Admin {
         ];
 
         $get_competition = $this->getData($id, 'luxyart_tb_user_competition', 'id_competition');
-
         if($_FILES['icon_com']['name']!=''){
             $upload_icon = $this->upload('icon_com','competition_icon_'.time().'.png', 'publics/competition_icon');
             if(is_array($upload_icon)){

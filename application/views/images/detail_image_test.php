@@ -1647,7 +1647,7 @@ function copyToClipboard(element) {
     </div>
     <div class="timeline-share" style="text-align:left;background-color:#fff;"><ul>
             <li class="timeline-share__twitter">
-            <a href="https://twitter.com/share?url=<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>&hashtags=LuxyArt&text= - 素材の写真素材<?php echo $detail_product->img_title ?> ｜LuxyArt（ラクシーアート）" target="_blank"><?php echo $this->lang->line('to_tweet'); ?></a></li>
+            <a href="https://twitter.com/share?url=<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>&hashtags=LuxyArt&text= - 素材の写真素材<?php echo $detail_product->img_title ?> ｜LuxyArt（OMOTENASHI）" target="_blank"><?php echo $this->lang->line('to_tweet'); ?></a></li>
             <li class="timeline-share__facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>" target="_blank"><?php echo $this->lang->line('to_share'); ?></a></li>
             <li  class="timeline-share__twitter" style="margin-left:6px"><div class="line-it-button" data-lang="ja" data-type="like" data-url="<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>" data-share="true" style="display: none;"></div>
   <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script></li>

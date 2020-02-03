@@ -4,7 +4,7 @@
 
 <head>
 
-	<title>Luxyart管理機能</title>
+	<title><?php echo $this->lang->line('site_title'); ?>管理機能</title>
 
 	<meta charset="utf-8">
 
@@ -166,7 +166,7 @@
 
 		<footer class="main_foot">
 
-			<p>Copyright&nbsp;&copy;&nbsp;LuxyArt.&nbsp;All&nbsp;Rights&nbsp;Reserved.</p>
+			<p><?php echo $this->lang->line('copyright'); ?></p>
 
 		</footer>
 

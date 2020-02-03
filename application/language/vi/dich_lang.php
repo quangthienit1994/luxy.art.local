@@ -3,12 +3,17 @@
 //                           Lang Vietnam                              //
 /////////////////////////////////////////////////////////////////////
 include 'dich_lang_more.php';
+
+/** ============ Added by Quang ============ */
+$lang['site_title'] = 'OMOTENASHI';
+/** ============ End Added by Quang ============ */
+
 $lang['ja']									= "日本語";
 $lang['vi']									= "Việt Nam";
 $lang['en']									= "English";
-$lang['copyright']							= "Copyright 2017 LuxyArt. All rights reserved.";
+$lang['copyright']							= "Copyright 2017 OMOTENASHI. All rights reserved.";
 $lang['home'] 								= "Trang chủ";
-$lang['site_name'] 							= "Trang web ảnh LuxyArt";
+$lang['site_name'] 							= "Trang web ảnh OMOTENASHI";
 $lang['login']	 							= "Đăng nhập";
 $lang['logout']	 							= "Thoát";
 $lang['cart']	 							= "Giỏ hàng";
@@ -117,7 +122,7 @@ $lang['registration_guidelines_step_02']	= "Bắt đầu đấu giá - lựa ch�
 $lang['registration_guidelines_content_02']	= "Chúng tôi sẽ quyết định các tác phẩm đoạt giải thưởng từ các bức ảnh được thu thập cho đến thời hạn. Nếu số ảnh chụp được ít hơn 30, có thể huỷ miễn phí.";								
 $lang['registration_guidelines_step_03']	= "Thanh toán & Tải xuống";
 $lang['registration_guidelines_content_03']	= "Vui lòng thanh toán khoản phí thưởng + 30% bằng thanh toán bằng thẻ tín dụng hoặc bằng chuyển khoản ngân hàng. Sau khi thanh toán được xác nhận, bạn có thể tải ảnh.";
-$lang['registration_competition_note_01']	= "Trước hết, những người muốn tham khảo ý kiến của nhân viên LuxyArt, những người quan tâm đến việc nhập cảnh";
+$lang['registration_competition_note_01']	= "Trước hết, những người muốn tham khảo ý kiến của nhân viên OMOTENASHI, những người quan tâm đến việc nhập cảnh";
 $lang['here']								= "ở đây";
 $lang['please_contact_us']					= "Xin vui lòng liên hệ với chúng tôi";
 $lang['title_of_the_competition_to_be_held']= "Tiêu đề tổ chức cuộc thi";
@@ -125,7 +130,7 @@ $lang['required']							= "yêu cầu";
 $lang['please_enter_your_name']				= "Vui lòng nhập tên của bạn";
 $lang['please_enter_title_competition']		= "Nhập tiêu đề đấu giá";
 $lang['upload_cover_photo']					= "Tải lên ảnh bìa";
-$lang['requied_upload_cover_photo']			= "Tải lên hình ảnh để nhớ nội dung yêu cầu. Nó được sử dụng trong trang thông báo yêu cầu vv (Khuyến khích kích thước: Chiều rộng từ 1.000px trở lên) Nếu bạn không có nó, hãy xin lỗi chúng tôi tại LuxyArt. Vui lòng liên hệ với chúng tôi khi chúng tôi cũng đã tư vấn.";
+$lang['requied_upload_cover_photo']			= "Tải lên hình ảnh để nhớ nội dung yêu cầu. Nó được sử dụng trong trang thông báo yêu cầu vv (Khuyến khích kích thước: Chiều rộng từ 1.000px trở lên) Nếu bạn không có nó, hãy xin lỗi chúng tôi tại OMOTENASHI. Vui lòng liên hệ với chúng tôi khi chúng tôi cũng đã tư vấn.";
 $lang['upload_icon']						= "Tải biểu tượng";
 $lang['posting_start_date_deadline']		= "Chọn ngày bắt đầu ~ kết thúc";
 $lang['select_publication_start_date']		= "Chọn ngày bắt đầu";
@@ -190,7 +195,7 @@ $lang['the_examination_period_will_be_between']  = "Thời gian kiểm tra sẽ 
 $lang['full_original_image']  = "Hình ảnh gốc đầy đủ";
 $lang['content_full_original_image']  = "Nếu bạn quyết định chủ đề và đăng ký nó, nếu bạn muốn có một bức ảnh mà bạn muốn nhiều hơn và nhiều hơn nữa, <br /> Có sẵn các loại vật liệu nhiếp ảnh không bị ảnh hưởng bởi phương tiện truyền thông khác mà không gặp rắc rối khi tìm nó. <br /> Bạn có thể tuyển dụng từ người sử dụng triển lãm từ tổng số tiền thưởng là 10.000 yên.";
 $lang['to_the_competition_holding_form'] = "Đối với hình thức tổ chức cạnh tranh";
-$lang['luxyart_competition_features'] = "Tính năng Cạnh tranh LuxyArt";
+$lang['OMOTENASHI_competition_features'] = "Tính năng Cạnh tranh OMOTENASHI";
 $lang['cheap_at_reasonable_price'] = "Giá rẻ với giá cả hợp lý";
 $lang['content_cheap_at_reasonable_price'] = "Có thể giữ từ tổng số tiền giải thưởng 10.000 yên. Sự kết hợp của tiền thưởng và số lượng tờ như \"1.000 Yên × 10 mẩu tuyển dụng\" hoặc \"500 yen × 20 miếng tuyển dụng\" là miễn phí. Nó ít tốn kém hơn là yêu cầu các nhiếp ảnh gia bắn.";
 $lang['i_am_just_waiting'] = "Tôi chỉ đang đợi";
@@ -235,7 +240,7 @@ $lang['notice_compe_extend_success_msg'] = "Gia hạn cuộc đấu giá thành 
 // Notice register success
 $lang['p_dang_ky_notice_dangky_title_h2'] = "Vi 会員登録が完了しました。";
 $lang['p_dang_ky_notice_dangky_content'] = "Vi 入力したメールアドレスに届いたメールを確認し、メール認証を完了してください。<br>報酬の受け取り情報の設定などは、以下のボタンよりクリエイター管理画面に移動しておこなってください。";
-$lang['p_dang_ky_notice_dangky_button'] = " Vi LuxyArtにログインする";
+$lang['p_dang_ky_notice_dangky_button'] = " Vi OMOTENASHIにログインする";
 $lang['please_input_title_competition'] = "Vui lòng nhập tiêu đề đấu giá";
 $lang['please_choose_icon'] = "Vui lòng chọn biểu tượng";
 $lang['please_choose_image'] = "Vui lòng chọn hình ảnh";
@@ -362,7 +367,7 @@ $lang['are_you_want_get_this_image_to_list_my_picture'] = "Bạn có muốn lấ
 $lang['email_is_not_valid'] = "Địa chỉ email không đúng định dạng";
 //HUU
 $lang['page_remin_h2'] = 'Forgot Password';
-$lang['page_remin_description'] = "Input email register account on Luxyart<br />We will send you new password login account";
+$lang['page_remin_description'] = "Input email register account on OMOTENASHI<br />We will send you new password login account";
 $lang['page_remin_button'] = "Submit";
 // Path URL
 $lang['path_home'] = "Trang chủ";
@@ -373,7 +378,7 @@ $lang['page_active_email_msg_error_already_active_code'] = "Your account already
 $lang['page_active_email_msg_error_code_not_true'] = "Code active email not true";
 $lang['page_active_email_msg_error_no_code'] = "Can't find code for active";
 $lang['page_active_email_go_to_mypage'] = "My Page";
-$lang['page_active_email_go_to_home_page'] = "Toppage LuxyArt";
+$lang['page_active_email_go_to_home_page'] = "Toppage OMOTENASHI";
 // My page
 // My page
 $lang['mypage_h1'] = "Trang của tôi";
@@ -408,7 +413,7 @@ $lang['mypage_user_config_cityname'] = "City Name";
 $lang['mypage_user_config_address'] = "Address";
 $lang['mypage_user_config_address_building'] = "Address building";
 $lang['mypage_user_desscription'] = "Desscription";
-$lang['mypage_user_config_notice_luxyart'] = "Accept notice on LuxyArt";
+$lang['mypage_user_config_notice_OMOTENASHI'] = "Accept notice on OMOTENASHI";
 $lang['mypage_user_config_button'] = "Update";
 // required Form
 $lang['required']			= "*";
@@ -455,7 +460,7 @@ $lang['page_user_message_read_all'] = "Read all";
 $lang['page_user_message_delete_all'] = "Delete all";
 $lang['page_user_message_content_message_subject'] ="Subject";
 $lang['page_user_message_content_message_date'] = "Date";
-$lang['page_user_message_user_send_is_admin'] = "Admin Luxyart";
+$lang['page_user_message_user_send_is_admin'] = "Admin OMOTENASHI";
 // Mypage user changed email
 $lang['user_page_change_email_h1'] = "Change a user email address";
 $lang['user_page_change_email_content_description'] ="You can change your email when register account";
@@ -539,7 +544,7 @@ $lang['user_credit_list_col_head_3'] = '1クレジットの価格';
 $lang['user_credit_list_show_currency'] = '円';
 $lang['user_credit_list_button_buy_point']= '購入する';
 $lang['user_credit_list_text_show_bottom1'] = 'クレジットとは何ですか？';
-$lang['user_credit_list_text_show_bottom2'] = 'クレジットはLuxyArtで素材購入の際に利用する通貨です。<br /> 1 クレジットから画像をダウンロードできますクレジットは購入日から365 日間有効です。<br />LuxyArtの詳しいご利用方法を知りたい方はご利用ガイドをご覧ください。';
+$lang['user_credit_list_text_show_bottom2'] = 'クレジットはOMOTENASHIで素材購入の際に利用する通貨です。<br /> 1 クレジットから画像をダウンロードできますクレジットは購入日から365 日間有効です。<br />OMOTENASHIの詳しいご利用方法を知りたい方はご利用ガイドをご覧ください。';
 // User do payment buy point
 $lang['card_error_exp']='カード番号を記入して下さい。';
 $lang['card_error_account_number_empty'] = 'カード番号を記入して下さい。';
@@ -630,7 +635,7 @@ $lang['p_dang_ky_creator_bottom_form3'] = "利用規約</a>に同意したもの
 // Notice register success
 $lang['p_dang_ky_notice_dangky_title_h2'] = "会員登録が完了しました。";
 $lang['p_dang_ky_notice_dangky_content'] = "入力したメールアドレスに届いたメールを確認し、メール認証を完了してください。<br>報酬の受け取り情報の設定などは、以下のボタンよりクリエイター管理画面に移動しておこなってください。";
-$lang['p_dang_ky_notice_dangky_button'] = " LuxyArtにログインする";
+$lang['p_dang_ky_notice_dangky_button'] = " OMOTENASHIにログインする";
 $lang['possibility_of_violation'] = "Khả năng vi phạm";
 $lang['this_is_other_ones_image'] = "Đây là hình ảnh của người khác";
 $lang['violent_image'] = "Hình ảnh bạo lực";

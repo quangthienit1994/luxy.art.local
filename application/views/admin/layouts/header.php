@@ -1,7 +1,7 @@
 <!--Start: Header -->
 <header class="navbar navbar-fixed-top bg-light">
     <div class="navbar-branding">
-        <a class="navbar-brand" href="admin"> <b>Luxyart</b>
+        <a class="navbar-brand" href="admin"> <b>OMOTENASHI</b>
         </a>
         <span id="toggle_sidemenu_l" class="glyphicons glyphicons-show_lines"></span>
         <ul class="nav navbar-nav pull-right hidden">

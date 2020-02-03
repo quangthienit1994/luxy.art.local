@@ -1,7 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 date_default_timezone_set('Asia/Ho_Chi_Minh');
-$config['base_url']	= 'http://211.125.90.8/';
+$web_url = $_SERVER['REQUEST_SCHEME'] . "://" .$_SERVER['HTTP_HOST'] . "/" ;
+$config['base_url']	= $web_url;
 $config['index_page'] = '';
+
+
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL

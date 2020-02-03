@@ -298,15 +298,15 @@ function set_focus(id){
         <div class="sp-nav__entry-menu">
         <?php 
 		$CI =&get_instance();
-$CI->config->load();
-$logged_in = $CI->function_model->get_logged_in();
-$user_id = $logged_in['user_id'];
-$user_firstname = $logged_in['user_firstname'];
-$user_lastname = $logged_in['user_lastname'];
-$user_level = $logged_in['user_level'];
-$name_call = $logged_in['user_display_name'];
-$CI->load->model('manager_user_model');
-$user = $CI->manager_user_model->get_user_id($user_id);
+    $CI->config->load();
+    $logged_in = $CI->function_model->get_logged_in();
+    $user_id = $logged_in['user_id'];
+    $user_firstname = $logged_in['user_firstname'];
+    $user_lastname = $logged_in['user_lastname'];
+    $user_level = $logged_in['user_level'];
+    $name_call = $logged_in['user_display_name'];
+    $CI->load->model('manager_user_model');
+    $user = $CI->manager_user_model->get_user_id($user_id);
 	if($user_id!='')
 	{?>
           <ul>

@@ -246,7 +246,7 @@ if(result){
           <p>このページをシェアして<br />クリエイターを応援しよう！</p>
           <ul>
             <li class="timeline-share__twitter">
-            <a href="https://twitter.com/share?url=<?php echo $linkshare;?>&hashtags=LuxyArt&text=<?php echo $CI->function_model->get_fullname($load_user_timeline['user_id'], $this->lang_id); ?> - のマイページ ｜LuxyArt（ラクシーアート）" target="_blank">ツイートする</a></li>
+            <a href="https://twitter.com/share?url=<?php echo $linkshare;?>&hashtags=LuxyArt&text=<?php echo $CI->function_model->get_fullname($load_user_timeline['user_id'], $this->lang_id); ?> - のマイページ ｜LuxyArt（OMOTENASHI）" target="_blank">ツイートする</a></li>
             <li class="timeline-share__facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $linkshare;?>" target="_blank">シェアする</a></li>
             <li style="margin: 0 0 0 6px;"><div class="line-it-button" data-lang="ja" data-type="like" data-url="<?php echo $linkshare;?>" data-share="true" style="display: none;"></div>
  <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script></li>
