@@ -6,12 +6,20 @@
  * TODO: mail config
  */
 
+// $config["mail"] = [
+//     'host' => 'smtp.luxyart.conoha.io',
+//     'port'=> 587 ,
+//     'protocol' => 'SMTP_AUTH', 
+//     'user' => 'verification@luxy.art',
+//     'pass' => '1SMWVxF9ra',
+//     'from' => 'verification@luxy.art',
+// ];
+
 $config["mail"] = [
-    'host' => 'smtp.luxyart.conoha.io', //smtpサーバーのアドレス
-    'port'=> 587 , //ポート番号
-    'protocol' => 'SMTP_AUTH', //認証方法
-    'user' => 'verification@luxy.art', //smtpサーバーのユーザー名
-    'pass' => '1SMWVxF9ra', //smtpサーバーのパスワード
-    'from' => 'verification@luxy.art',　//発信元メールアドレス
+    'host' => 'mail.omotenaship.com',
+    'port'=> 587 ,
+    'protocol' => 'SMTP_AUTH', 
+    'user' => 'verification@omotenaship.com',
+    'pass' => '123qwe!@#',
+    'from' => 'Omotenaship',
 ];
- 

@@ -1,0 +1,1 @@
+Route /admin/images/post_image không hoạt động vì chưa có server up ảnh

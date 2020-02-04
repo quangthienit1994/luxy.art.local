@@ -32,7 +32,6 @@ class Images extends CI_Controller {
         $CI =& get_instance();
         $CI->config->load();
         $this->lang->load('dich', 'ja');
-        
     }
 
     public function post_image(){

@@ -124,7 +124,42 @@ class User extends CI_Controller {
 			$user_id_gancode = 'EN'.$user_id_gancode;
 		}
 		
-		$data = array('user_email'=>$email,'user_macode'=>$user_id_gancode,'display_name'=>$user_name,'user_pass'=>md5($passord),'country_id'=>$this->lang_id,'state_id'=>$state_id,'notice_luxyart'=>$has_notice,'user_level'=>1,'user_status'=>0,'user_dateregister'=>$date_register,'user_id_code_invite'=>$user_id_code_invite,'os_register'=>$os_register);
+		$data = array(
+			'user_email'=>$email,
+			'user_macode'=>$user_id_gancode,
+			'display_name'=>$user_name,
+			'user_pass'=>md5($passord),
+			'country_id'=>$this->lang_id,
+			'state_id'=>$state_id,
+			'notice_luxyart'=>$has_notice,
+			'user_level'=>1,
+			'user_status'=>0,
+			'user_dateregister'=>$date_register,
+			'user_id_code_invite'=>$user_id_code_invite,
+			'os_register'=>$os_register,
+			
+			/**
+			 * Fixed by: Quang Nguyen
+			 * Date: 03/02/2020
+			 * TODO: MySQL defined field errors, Add for fix default value
+			 * URL: entry.html
+			 */
+			// "user_firstname" 				=> $this->input->post("user_firstname", ""),
+			// "user_lastname" 				=> $this->input->post("user_lastname", ""),
+			// "user_avatar" 					=> $this->input->post("user_avatar", ""),
+			// "user_zipcode" 					=> $this->input->post("user_zipcode", ""),
+			// "cityname" 						=> $this->input->post("cityname", ""),
+			// "user_address" 					=> $this->input->post("user_address", ""),
+			// "user_address_building" 		=> $this->input->post("user_address_building", ""),
+			// "user_introduction" 			=> $this->input->post("user_introduction", ""),
+			// "user_paymoney_getpoint" 		=> $this->input->post("user_paymoney_getpoint", ""),
+			// "user_point" 					=> $this->input->post("user_point", ""),
+			// "is_active" 					=> $this->input->post("is_active", ""),
+			// "user_with_point_id" 			=> $this->input->post("user_with_point_id", ""),
+			// "user_banner"					=> $this->input->post("user_banner", "")
+			/** ============ END FIX ============ */
+		);
+
 		$this->db->insert('luxyart_tb_user',$data);
 		
 		$user_id = $this->db->insert_id();

@@ -8,8 +8,6 @@ class Function_model extends CI_Model
 		
 		$this->load->model('manager_image_model');
 		$this->load->helper('cookie');
-		$this->config->load('errors');
-		$this->config->load('mail');
    	}
    	/**
    	 * Get User Follow
@@ -2065,22 +2063,26 @@ class Function_model extends CI_Model
 	
 	function sendHtmlMailSimple($to ='',$from ='',$subject='',$message='',$cc=''){
 		
+		$this->config->load('errors');
+		$this->config->load('mail');
+
 		require_once("qdmail.php");
 		//include "qdsmtp.php";
 		require_once("qdsmtp.php");
 		
 		$mail = new Qdmail();
 		$mail -> smtp(true);
-		$param = $this->config->item("mail");;
+		$param = $this->config->item("mail");
 		$mail -> smtpServer($param);
 		$mail -> to($to); //宛先
 		$mail -> subject($subject); //タイトル
 		$mail -> html($message); //メッセージ本文
 		//$mail -> attach('./testemail.php'); //添付ファイルつける
 		$return_flag = $mail ->send(); //送信
-		
+		var_dump($param);
+		var_dump($mail->errorStatment());
+		echo "status $return_flag -> $to";
 		if($return_flag != TRUE){
-			
 			$email_to	= $this->config->item("errors")["email"]["to"];
 			$subject 	= 'Error email luxy.art: '.$to;
 			$message 	= 'Error email luxy.art don\'t send: '.$to;
@@ -2097,6 +2099,7 @@ class Function_model extends CI_Model
 			$mail ->send(); //送信
 			
 		}
+		exit();
 		
 		//return $return_flag;
 		
@@ -2123,6 +2126,7 @@ class Function_model extends CI_Model
 	
 	function sendMailHtmlAttachment($to ='',$from ='',$subject='',$message='',$cc='', $attachment=''){
 	
+		$this->config->load('mail');
 		require_once("qdmail.php");
 		//include "qdsmtp.php";
 		require_once("qdsmtp.php");
